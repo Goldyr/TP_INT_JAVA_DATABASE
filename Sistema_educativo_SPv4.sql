@@ -1,4 +1,3 @@
-
 DELIMITER $$
 create procedure sp_altaUsuario
 (
@@ -19,7 +18,7 @@ INSERT INTO Usuarios (
                         DNI_Usuario, Nombre_Usuario, Apellido_Usuario,
                         FechaNac_Usuario,Direccion_Usuario, Localidad_Usuario,
                         Nacionalidad_Usuario, Email_Usuario, Contraseña_Usuario, Telefono_Usuario, Legajo_Usuario)
-    VALUES (DNI,NOMBRE,APELLIDO,FECHANAC,DIRECCION,LOCALIDAD,NACIONALIDAD,EMAIL, CONTRASEÑA, TELEFONO, concat('Usu-', (Select count(usu.Legajo_Usuario) from Usuarios as us inner join Usuarios as usu)+1));
+    VALUES (DNI,NOMBRE,APELLIDO,FECHANAC,DIRECCION,LOCALIDAD,NACIONALIDAD,EMAIL, CONTRASEÑA, TELEFONO, concat('Usu-', (Select count(us.Legajo_Usuario) from Usuarios as us)));
 END $$
 DELIMITER ; 
 
@@ -75,7 +74,7 @@ BEGIN
 	INSERT INTO alumnos (DNI_Alumno, Nombre_Alumno, 
 		Apellido_Alumno, FechaNac_Alumno, Direccion_Alumno, Nacionalidad_Alumno,Provincia_Alumno, Email_Alumno,
         Telefono_Alumno, Legajo_Alumno) 
-	VALUES(DNI, Nombre, Apellido, FechaNac, Direccion, Nacionalidad,Provincia, Email, Telefono, (SELECT COUNT(alum.Legajo_Alumno) FROM Alumnos as al inner join alumnos as alum)+1);
+	VALUES(DNI, Nombre, Apellido, FechaNac, Direccion, Nacionalidad,Provincia, Email, Telefono, (SELECT COUNT(al.Legajo_Alumno) + 1 FROM Alumnos as al));
 END $$
 DELIMITER ;
 
@@ -125,7 +124,6 @@ END $$
 DELIMITER ;
 
 
-
 -- LISTAR ALUMNOS
 DELIMITER $$
 CREATE PROCEDURE sp_listarAlumnos()
@@ -144,7 +142,7 @@ IN Año CHAR(4)
 )
 BEGIN 
 INSERT INTO cursos(CodMateria_Curso, Semestre_Curso, Año_Curso, CodCurso_Curso)
-	VALUES(CodMateria, Semestre, Año, CONCAT('Cur-', (SELECT COUNT(cur.CodCurso_Curso) FROM Cursos as cu inner join Cursos as cur)));
+	VALUES(CodMateria, Semestre, Año, CONCAT('Cur-', (SELECT COUNT(cu.CodCurso_Curso) + 1 FROM Cursos as cu)));
 END $$
 DELIMITER ;
 
@@ -235,7 +233,7 @@ INSERT INTO Usuarios (
                         DNI_Usuario, Nombre_Usuario, Apellido_Usuario,
                         FechaNac_Usuario,Direccion_Usuario, Localidad_Usuario,
                         Nacionalidad_Usuario, Email_Usuario, Contraseña_Usuario, Telefono_Usuario, Legajo_Usuario, Admin_Usuario)
-    VALUES (DNI,NOMBRE,APELLIDO,FECHANAC,DIRECCION,LOCALIDAD,NACIONALIDAD,EMAIL, CONTRASEÑA, TELEFONO, concat('Usu-', (Select count(usu.Legajo_Usuario) from Usuarios as us inner join Usuarios as usu)+1),0);
+    VALUES (DNI,NOMBRE,APELLIDO,FECHANAC,DIRECCION,LOCALIDAD,NACIONALIDAD,EMAIL, CONTRASEÑA, TELEFONO, concat('Usu-', (Select count(us.Legajo_Usuario) + 1  from Usuarios as us)),0);
 END $$
 DELIMITER ;
 
@@ -313,10 +311,6 @@ INNER JOIN materias as m ON m.CodMateria_Materia = c.CodMateria_Curso
 WHERE n.CodNotas_Nota = CODNOTA;
 END $$
 DELIMITER ;
-
-
-
-
 
 
 /*
