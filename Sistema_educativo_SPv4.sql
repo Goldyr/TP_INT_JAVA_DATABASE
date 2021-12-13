@@ -1,3 +1,5 @@
+USE `bd_sist_educativo`;
+
 DELIMITER $$
 create procedure sp_altaUsuario
 (

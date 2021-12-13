@@ -87,6 +87,21 @@ FOREIGN KEY (Legajo_Alumno_CxA) REFERENCES Alumnos(Legajo_Alumno),
 PRIMARY KEY (Legajo_Alumno_CxA, CodCurso_CxA)
 );
 
+CREATE TABLE Provincias(
+IdProv_Provincias VARCHAR(6) NOT NULL,
+Descripcion_Provincias VARCHAR(30) NOT NULL,
+
+PRIMARY KEY (IdProv_Provincias)
+);
+
+CREATE TABLE Localidades(
+IdLoc_Localidades VARCHAR(8) NOT NULL,
+IdProv_Localidades VARCHAR(6) NOT NULL,
+Descripcion_Localidades VARCHAR(30) NOT NULL,
+
+PRIMARY KEY (IdLoc_Localidades),
+FOREIGN KEY (IdProv_Localidades) REFERENCES Provincias(IdProv_Provincias)
+);
 
 /* INSERTS PRUEBAS */
 /**/
@@ -130,6 +145,12 @@ VALUES(1 ,8 , 8, 'REGULAR');
 INSERT INTO bd_sist_educativo.CursosxAlumnos
 (Legajo_Alumno_CxA, CodCurso_CxA, CodNotas_CxA, Estado_CxA)
 VALUES('654321' , 1, 1, 1);
+
+INSERT INTO bd_sist_educativo.Provincias
+(IdProv_Provincias, Descripcion_Provincias)
+VALUES('Prov1', 'Buenos Aires');
+
+SELECT * FROM Provincias
 
 /* SELECT PRUEBAS */
 SELECT C.*, M.NombreMateria_Materia FROM Cursos AS C
