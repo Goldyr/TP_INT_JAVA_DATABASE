@@ -162,12 +162,12 @@ DELIMITER $$
 CREATE PROCEDURE sp_altaCursosxAlumnos
 (
 IN Legajo_Alumno VARCHAR(12),
-IN CodCurso VARCHAR(12),
-IN CodNotas VARCHAR(12)
+IN CodCurso VARCHAR(12)
 )
 BEGIN
+call sp_altaNotas();
 INSERT INTO cursosxalumnos (Legajo_Alumno_CxA, CodCurso_CxA, CodNotas_CxA)
-	VALUES (Legajo_Alumno, CodCurso, CodNotas);
+    VALUES (Legajo_Alumno, CodCurso, CONCAT('not-', (SELECT COUNT(cu.CodNotas_Nota)  FROM notas as cu)));
 END $$
 DELIMITER ;
 
@@ -194,18 +194,6 @@ SELECT * FROM cursosxalumnos;
 END $$
 DELIMITER ;
 
--- CREAR CURSO POR USUARIO
-DELIMITER $$ 
-CREATE PROCEDURE sp_altaCursosxUsuarios
-(
-IN Legajo_CxU VARCHAR(12),
-IN CodCurso_CxU VARCHAR(12)
-)
-BEGIN
-INSERT INTO cursosxusuarios (Legajo_Usuario_CxU, CodCurso_CxU)
-    VALUES (Legajo_CxU, CodCurso_CxU);
-END $$
-DELIMITER;
 
 -- LISTAR CURSOS X USUARIO
 DELIMITER $$ 
@@ -314,6 +302,17 @@ WHERE n.CodNotas_Nota = CODNOTA;
 END $$
 DELIMITER ;
 
+
+
+DELIMITER $$ 
+create Procedure sp_altaNotas
+(
+)
+BEGIN
+INSERT INTO notas(CodNotas_Nota)
+ values(CONCAT('not-', (SELECT COUNT(cu.CodNotas_Nota) + 1 FROM notas as cu)));
+END $$
+DELIMITER ;
 
 /*
 CREATE TRIGGER trCrearAlumno
