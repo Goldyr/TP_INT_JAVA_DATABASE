@@ -314,12 +314,24 @@ INSERT INTO notas(CodNotas_Nota)
 END $$
 DELIMITER ;
 
-/*
-CREATE TRIGGER trCrearAlumno
-	AFTER INSERT 
-    ON alumnos FOR EACH ROW
-    BEGIN 
-	UPDATE SET NEW.Legajo_Alumno = SELECT Legajo_Alumno FROM alumnos ORDER BY Legajo_Alumno DESC LIMIT 1 + 1
-    END
+DELIMITER $$
+CREATE PROCEDURE sp_modificarNotasCursosxAlumnos
+(
+IN Legajo_Alumno VARCHAR(12),
+IN CodCurso VARCHAR(12),
+IN Parcial1 DECIMAL(4,2), 
+IN Parcial2 DECIMAL(4,2), 
+IN Recup1 DECIMAL(4,2), 
+IN Recup2 DECIMAL(4,2)
+)
+BEGIN
+	UPDATE notas AS n
+	INNER JOIN cursosxalumnos AS cxa ON cxa.CodNotas_CxA = n.CodNotas_Nota
+	SET 
+		n.Parcial_1_Nota = Parcial1,
+		n.Parcial_2_Nota = Parcial2,
+        n.Recuperatorio_1_Nota = Recup1,
+        n.Recuperatorio_2_Nota = Recup2
+	WHERE cxa.Legajo_Alumno_CxA = Legajo_Alumno AND cxa.CodCurso_CxA = CodCurso;
+END$$
 DELIMITER ;
-*/
