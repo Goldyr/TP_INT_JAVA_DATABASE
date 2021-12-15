@@ -194,6 +194,18 @@ SELECT * FROM cursosxalumnos;
 END $$
 DELIMITER ;
 
+-- CREAR CURSO POR USUARIO
+DELIMITER $$ 
+CREATE PROCEDURE sp_altaCursosxUsuarios
+(
+IN Legajo_CxU VARCHAR(12),
+IN CodCurso_CxU VARCHAR(12)
+)
+BEGIN
+INSERT INTO cursosxusuarios (Legajo_Usuario_CxU, CodCurso_CxU)
+    VALUES (Legajo_CxU, CodCurso_CxU);
+END $$
+DELIMITER;
 
 -- LISTAR CURSOS X USUARIO
 DELIMITER $$ 

@@ -283,8 +283,18 @@ INSERT INTO bd_sist_educativo.Localidades
 INSERT INTO bd_sist_educativo.Localidades
 (IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc3', 'Prov1', 'Pacheco');
 
+INSERT INTO bd_sist_educativo.Localidades
+(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc4', 'Prov1', 'Vicente Lopez');
 
+INSERT INTO bd_sist_educativo.Localidades
+(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc5', 'Prov1', 'San Martin');
 
+INSERT INTO bd_sist_educativo.Localidades
+(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc6', 'Prov1', 'Avellaneda');
+
+INSERT INTO bd_sist_educativo.Localidades
+(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc7', 'Prov1', 'San Isidro');
+select * from Materias;
 -- Alumnos x Cursos
 call sp_altaCursosxAlumnos('1','1');
 call sp_altaCursosxAlumnos('1','2');
