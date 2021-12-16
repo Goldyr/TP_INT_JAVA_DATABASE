@@ -295,13 +295,13 @@ DELIMITER ;
 
 -- D -------------------------------------------------------------
 
-DELIMITER $$ 
-CREATE PROCEDURE sp_obtenerNotasxCodigo
-(
+
+DELIMITER $$
+CREATE PROCEDURE sp_obtenerNotasxCodigo(
 IN CODNOTA VARCHAR(16)
 )
 BEGIN
-SELECT n.codNotas_Nota, m.NombreMateria_Materia, a.Legajo_Alumno, Nombre_Alumno, a.Apellido_Alumno, a.Email_Alumno, n.Parcial_1_Nota, n.Parcial_2_Nota, 
+SELECT c.CodCurso_Curso, n.codNotas_Nota, m.NombreMateria_Materia, a.Legajo_Alumno, Nombre_Alumno, a.Apellido_Alumno, a.Email_Alumno, n.Parcial_1_Nota, n.Parcial_2_Nota, 
         n.Recuperatorio_1_Nota, Recuperatorio_2_Nota, n.EstadoCursada_Nota FROM Notas as n
 INNER JOIN cursosxalumnos as cxa ON cxa.CodNotas_CxA = n.CodNotas_Nota
 INNER JOIN alumnos as a ON a.Legajo_Alumno = cxa.Legajo_Alumno_CxA
@@ -344,3 +344,4 @@ BEGIN
 	WHERE cxa.Legajo_Alumno_CxA = Legajo_Alumno AND cxa.CodCurso_CxA = CodCurso;
 END$$
 DELIMITER ;
+
