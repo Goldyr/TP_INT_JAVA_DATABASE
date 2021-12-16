@@ -94,12 +94,10 @@ SET alumnos.Estado_Alumno = 0 WHERE Legajo_Alumno = Legajo;
 END $$
 DELIMITER ;
 
--- MODIFICAR ALUMNOS
 
 -- MODIFICAR ALUMNOS
 DELIMITER $$
-CREATE PROCEDURE sp_modificarAlumno
-(
+CREATE  PROCEDURE  sp_modificarAlumno(
 IN DNI CHAR(8),
 IN Nombre CHAR(20),
 IN Apellido CHAR(20),
@@ -115,11 +113,12 @@ BEGIN
 UPDATE alumnos
 SET alumnos.DNI_Alumno = DNI,
 alumnos.Nombre_Alumno = Nombre,
+alumnos.Apellido_Alumno = Apellido,
 alumnos.FechaNac_Alumno = FechaNac,
 alumnos.Direccion_Alumno = Direccion,
 alumnos.Nacionalidad_Alumno = Nacionalidad,
 alumnos.Provincia_Alumno = Provincia,
-sp_altaProfesoralumnos.Email_Alumno = Email,
+alumnos.Email_Alumno = Email,
 alumnos.Telefono_Alumno = Telefono
 WHERE alumnos.Legajo_Alumno = Legajo;
 END $$
@@ -254,15 +253,13 @@ DELIMITER ;
 -- A -------------------------------------------------------------
 
 -- LISTAR NOTAS X MATERIA X PROFESOR
-
 DELIMITER $$ 
-CREATE PROCEDURE sp_listarNotasMateriaxProfesor
-(
+CREATE PROCEDURE sp_listarNotasMateriaxProfesor(
 IN LEGAJO_PROFESOR VARCHAR(12),
 IN CODMATERIA VARCHAR(12)
 )
 BEGIN
-SELECT n.codNotas_Nota, m.NombreMateria_Materia, a.Legajo_Alumno, Nombre_Alumno, a.Apellido_Alumno, a.Email_Alumno, n.Parcial_1_Nota, n.Parcial_2_Nota, 
+SELECT c.CodCurso_Curso, n.codNotas_Nota, m.NombreMateria_Materia, a.Legajo_Alumno, Nombre_Alumno, a.Apellido_Alumno, a.Email_Alumno, n.Parcial_1_Nota, n.Parcial_2_Nota, 
         n.Recuperatorio_1_Nota, Recuperatorio_2_Nota, n.EstadoCursada_Nota FROM Notas AS n
 INNER JOIN cursosxalumnos as cxa ON cxa.CodNotas_CxA = n.CodNotas_Nota
 INNER JOIN alumnos as a ON a.Legajo_Alumno = cxa.Legajo_Alumno_CxA
@@ -272,7 +269,7 @@ INNER JOIN cursosxusuarios AS cxu ON cxu.CodCurso_CxU = c.CodCurso_Curso
 INNER JOIN usuarios u ON u.Legajo_Usuario = cxu.Legajo_Usuario_CxU
 WHERE u.Legajo_Usuario = LEGAJO_PROFESOR AND m.CodMateria_Materia = CODMATERIA AND cxa.Estado_CxA = 1;
 END $$
-DELIMITER ;
+DELIMIT ;
 
 -- C -------------------------------------------------------------
 DELIMITER $$ 
