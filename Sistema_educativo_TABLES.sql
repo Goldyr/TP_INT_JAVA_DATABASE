@@ -45,7 +45,6 @@ PRIMARY KEY (Legajo_Usuario_CxU, CodCurso_CxU)
 );
 
 
-
 CREATE TABLE Alumnos(
 Legajo_Alumno VARCHAR(12) NOT NULL,
 DNI_Alumno char (8) UNIQUE NOT NULL,
@@ -73,8 +72,6 @@ PRIMARY KEY (CodNotas_Nota)
 );
 
 
-
-
 CREATE TABLE CursosxAlumnos(
 Legajo_Alumno_CxA VARCHAR(12) NOT NULL,
 CodCurso_CxA VARCHAR(12) NOT NULL,
@@ -86,21 +83,7 @@ FOREIGN KEY (Legajo_Alumno_CxA) REFERENCES Alumnos(Legajo_Alumno),
 PRIMARY KEY (Legajo_Alumno_CxA, CodCurso_CxA)
 );
 
-CREATE TABLE Provincias(
-IdProv_Provincias VARCHAR(6) NOT NULL,
-Descripcion_Provincias VARCHAR(30) NOT NULL,
 
-PRIMARY KEY (IdProv_Provincias)
-);
-
-CREATE TABLE Localidades(
-IdLoc_Localidades VARCHAR(8) NOT NULL,
-IdProv_Localidades VARCHAR(6) NOT NULL,
-Descripcion_Localidades VARCHAR(30) NOT NULL,
-
-PRIMARY KEY (IdLoc_Localidades),
-FOREIGN KEY (IdProv_Localidades) REFERENCES Provincias(IdProv_Provincias)
-);
 
 
 

@@ -81,105 +81,35 @@ UPDATE Cursos as c SET c.Estado_Curso = 0 WHERE c.CodCurso_Curso = '13' or c.Cod
 
 /*Admins*/
 INSERT INTO bd_sist_educativo.Usuarios
-(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
-VALUES ('12345','admin','45645676','admin','nimda','2000-07-10','Calle 123', 'Argentino','admin', '8678656', 1, 1);
+(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Localidad_Usuario, Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
+VALUES ('12345','admin','45645676','admin','nimda','2000-07-10','Calle 123','Pacheco', 'Argentino','admin', '8678656', 1, 1);
 
-/*Profes*/
-/**/
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov1', 'Buenos Aires');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov2', 'Catamarca');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov3', 'Chaco');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov4', 'Chubut');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov5', 'Córdoba');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov6', 'Corrientes');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov7', 'Entre Ríos');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov8', 'Formosa');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov9', 'Jujuy');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov10', 'La Pampa');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov11', 'La Rioja');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov12', 'Mendoza');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov13', 'Misiones');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov14', 'Neuquén');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov15', 'Río Negro');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov16', 'Salta');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov17', 'San Juan');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov18', 'San Luis');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov19', 'Santa Cruz');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov20', 'Santa Fe');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov21', 'Santiago del Estero');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov22', 'Tierra del Fuego');
-
-INSERT INTO bd_sist_educativo.Provincias
-(IdProv_Provincias, Descripcion_Provincias) VALUES ('Prov23', 'Tucumán');
 
 /*PROFESORES*/
 
 INSERT INTO bd_sist_educativo.Usuarios
-(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
-VALUES ('Usu-2','profe1','41244141','Sergio','Armado','2000-07-10','Avellaneda', 'Argentino','sermail@email.com', '42133456', 1, 0);
+(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Localidad_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
+VALUES ('Usu-2','profe1','41244141','Sergio','Armado','2000-07-10','Avellaneda' ,'Tigre', 'Argentino','sermail@email.com', '42133456', 1, 0);
 
 INSERT INTO bd_sist_educativo.Usuarios
-(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
-VALUES ('Usu-3','contra','45430943','Matias','Flori','1988-02-10','Alem', 'Argentino','matymail@gmail.com', '45553421', 1, 0);
+(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Localidad_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
+VALUES ('Usu-3','contra','45430943','Matias','Flori','1988-02-10','Alem','Pacheco', 'Argentino','matymail@gmail.com', '45553421', 1, 0);
 
 INSERT INTO bd_sist_educativo.Usuarios
-(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
-VALUES ('Usu-4','pass','42144234','Facundo','Rivas','1999-09-05','Constitucion', 'Argentino','facumail@gmail.com', '34246048', 1, 0);
+(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Localidad_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
+VALUES ('Usu-4','pass','42144234','Facundo','Rivas','1999-09-05','Constitucion','Pacheco', 'Argentino','facumail@gmail.com', '34246048', 1, 0);
 
 INSERT INTO bd_sist_educativo.Usuarios
-(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
-VALUES ('Usu-5','3456','43363212','Enzo','Bogado','1999-11-12','9 de julio', 'Argentino','enzomail@gmail.com', '34932323', 1, 0);
+(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Localidad_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
+VALUES ('Usu-5','3456','43363212','Enzo','Bogado','1999-11-12','9 de julio','San Isidro', 'Argentino','enzomail@gmail.com', '34932323', 1, 0);
 
 INSERT INTO bd_sist_educativo.Usuarios
-(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
-VALUES ('Usu-6','78910','42341232','Sebas','Buelga','1995-04-01','San Martin', 'Argentino','sebamail@gmail.com', '35431235', 1, 0);
+(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Localidad_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
+VALUES ('Usu-6','78910','42341232','Sebas','Buelga','1995-04-01','San Martin','Tigre', 'Argentino','sebamail@gmail.com', '35431235', 1, 0);
 
 INSERT INTO bd_sist_educativo.Usuarios
-(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
-VALUES ('Usu-7','baja','54321232','Profe','Baja','1930-07-01','Lavalle', 'Argentino','baja@gmail.com', '54231235', 0, 0);
+(Legajo_Usuario, Contraseña_Usuario ,DNI_Usuario,Nombre_Usuario,Apellido_Usuario,FechaNac_Usuario,Direccion_Usuario,Localidad_Usuario,Nacionalidad_Usuario,Email_Usuario,Telefono_Usuario,Estado_Usuario,Admin_Usuario)
+VALUES ('Usu-7','baja','54321232','Profe','Baja','1930-07-01','Lavalle','San Fernando', 'Argentino','baja@gmail.com', '54231235', 0, 0);
 
 /*CursosxUsuarios also known as CursoxProfe*/
 
@@ -223,7 +153,7 @@ VALUES('Usu-6','6' );
 /*
 INSERT DE ALUMNOS
 */
-
+select * from usuarios;
 INSERT INTO bd_sist_educativo.Alumnos
 (Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
 VALUES ('1',44234324,'Ulises','Tamayo','2003-04-10','Platense 234','Uruguayo','uliuru@gmail.com','112323444', 1);
@@ -273,27 +203,6 @@ INSERT INTO bd_sist_educativo.Alumnos
 VALUES ('12',42223333,'Hugo','Couto','1995-08-12','Mosconi 5422','Argentino','andel34@gmail.com','1139333212', 1);
 
 
--- LOCALIDADES
-INSERT INTO bd_sist_educativo.Localidades
-(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc1', 'Prov1', 'Tigre');
-
-INSERT INTO bd_sist_educativo.Localidades
-(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc2', 'Prov1', 'San Fernando');
-
-INSERT INTO bd_sist_educativo.Localidades
-(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc3', 'Prov1', 'Pacheco');
-
-INSERT INTO bd_sist_educativo.Localidades
-(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc4', 'Prov1', 'Vicente Lopez');
-
-INSERT INTO bd_sist_educativo.Localidades
-(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc5', 'Prov1', 'San Martin');
-
-INSERT INTO bd_sist_educativo.Localidades
-(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc6', 'Prov1', 'Avellaneda');
-
-INSERT INTO bd_sist_educativo.Localidades
-(IdLoc_Localidades, IdProv_Localidades, Descripcion_Localidades) VALUES ('Loc7', 'Prov1', 'San Isidro');
 
 -- Alumnos x Cursos
 call sp_altaCursosxAlumnos('1','1');
