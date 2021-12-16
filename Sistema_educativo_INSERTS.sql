@@ -155,52 +155,57 @@ INSERT DE ALUMNOS
 */
 select * from usuarios;
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('1',44234324,'Ulises','Tamayo','2003-04-10','Platense 234','Uruguayo','uliuru@gmail.com','112323444', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('1',44234324,'Ulises','Tamayo','2003-04-10','Platense 234','Uruguayo','uliuru@gmail.com','112323444', 1, 'Buenos Aires');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('2',41233442,'Octavia','Iñiguez','2001-02-11','Perito 3211','Argentino','octini@gmail.com','345423332', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('2',41233442,'Octavia','Iñiguez','2001-02-11','Perito 3211','Argentino','octini@gmail.com','345423332', 1, 'Catamarca');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('3',45971323,'Santos','Nogueira','2000-04-15','Junin 4234','Argentino','junialo@gmail.com','114531233', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('3',45971323,'Santos','Nogueira','2000-04-15','Junin 4234','Argentino','junialo@gmail.com','114531233', 1, 'Chaco');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('4',45645323,'Martin','Rodriguez','1997-02-09','Cordoba 2334','Chileno','fanmet32@gmail.com','1133231576', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('4',45645323,'Martin','Rodriguez','1997-02-09','Cordoba 2334','Chileno','fanmet32@gmail.com','1133231576', 1, 'Chubut');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('5',45474641,'Viviana','Tandil','1998-04-02','Uruguay 2424','Argentino','vivi@gmail.com','1147528467', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('5',45474641,'Viviana','Tandil','1998-04-02','Uruguay 2424','Argentino','vivi@gmail.com','1147528467', 1, 'Cordoba');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('6',40776565,'Rodrigo','Amiya','2001-06-01','Alem 1534','Argentino','fsaf@gmail.com','1153523217', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('6',40776565,'Rodrigo','Amiya','2001-06-01','Alem 1534','Argentino','fsaf@gmail.com','1153523217', 1, 'Corrientes');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('7',43241365,'Manuel','Andres','2002-08-12','25 de mayo','Argentino','ftreqw@gmail.com','1113243217', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('7',43241365,'Manuel','Andres','2002-08-12','25 de mayo','Argentino','ftreqw@gmail.com','1113243217', 1, 'Entre Rios');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('8',42323232,'Miguel','Angel','1999-08-12','Constitucion 3000','Argentino','arg324@gmail.com','1142343217', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('8',42323232,'Miguel','Angel','1999-08-12','Constitucion 3000','Argentino','arg324@gmail.com','1142343217', 1, 'Formosa');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('9',40093232,'Reinaldo','Gonzales','2002-08-12','Las heras 4243','Argentino','hades534@gmail.com','43321323', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('9',40093232,'Reinaldo','Gonzales','2002-08-12','Las heras 4243','Argentino','hades534@gmail.com','43321323', 1, 'Jujuy');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('10',49873232,'Arnoldo','Miguel','1997-01-01','Entre Rios 4243','Argentino','Asdf234@gmail.com','114233339', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('10',49873232,'Arnoldo','Miguel','1997-01-01','Entre Rios 4243','Argentino','Asdf234@gmail.com','114233339', 1, 'La Pampa');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('11',48978789,'Nicolas','Cornejo','2000-08-12','Sarmiento 1232','Argentino','draco30@gmail.com','1134343223', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('11',48978789,'Nicolas','Cornejo','2000-08-12','Sarmiento 1232','Argentino','draco30@gmail.com','1134343223', 1, 'La Rioja');
 
 INSERT INTO bd_sist_educativo.Alumnos
-(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno)
-VALUES ('12',42223333,'Hugo','Couto','1995-08-12','Mosconi 5422','Argentino','andel34@gmail.com','1139333212', 1);
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('12',42223333,'Hugo','Couto','1995-08-12','Mosconi 5422','Argentino','andel34@gmail.com','1139333212', 1, 'Mendoza');
+
+INSERT INTO bd_sist_educativo.Alumnos
+(Legajo_Alumno,DNI_Alumno,Nombre_Alumno,Apellido_Alumno,FechaNac_Alumno,Direccion_Alumno, Nacionalidad_Alumno,Email_Alumno,Telefono_Alumno,Estado_Alumno, Provincia_Alumno)
+VALUES ('13',47823333,'Marcelo','koto','2001-09-12','Terrateniente 5422','Argentino','Makoto@gmail.com','1132155772', 1, 'Mendoza');
+
 
 
 
