@@ -269,7 +269,7 @@ INNER JOIN cursosxusuarios AS cxu ON cxu.CodCurso_CxU = c.CodCurso_Curso
 INNER JOIN usuarios u ON u.Legajo_Usuario = cxu.Legajo_Usuario_CxU
 WHERE u.Legajo_Usuario = LEGAJO_PROFESOR AND m.CodMateria_Materia = CODMATERIA AND cxa.Estado_CxA = 1;
 END $$
-DELIMIT ;
+DELIMITER ;
 
 -- C -------------------------------------------------------------
 DELIMITER $$ 
